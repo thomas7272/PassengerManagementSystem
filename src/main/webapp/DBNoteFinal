@@ -1,0 +1,94 @@
+select * from Login;
+insert into Login(Email,Password,UserType,Status) values ('Alex1234','Alex@123456','Admin','Active');
+select * from Login;
+
+create table Passenger(
+  FullName varchar(255),
+  Email varchar(255),
+  Password varchar(255),
+  ConfirmPassword varchar(255),
+  Phone long(10));
+ insert into Passenger(FullName,Email,Password,ConfirmPassword,Phone)values('Catherine','catherine@gmail.com','Cat@123456','Cat@123456',1234567890);
+ insert into Passenger(FullName,Email,Password,ConfirmPassword,Phone)values('Jack','Jack@gmail.com','Jack@123456','Jack@123456',9876543210);
+ insert into Passenger(FullName,Email,Password,ConfirmPassword,Phone)values('Catherine','catherine@gmail.com','Cat@123456','Cat@123456',1234567890);
+  create table TrainDetails(TrainNumber int,TrainName varchar(255),origin varchar(255),Destination varchar(255));
+  create table PassengerBookings(Name varchar(255),Age int(3),Gender varchar(255), TrainNumber int,TrainName varchar(255),origin varchar(255),Destination varchar(255));
+  insert into  TrainDetails(TrainNumber ,TrainName ,origin ,Destination )values();
+  
+  select * from Passenger;
+  
+  
+  
+create table PassengerDetails
+(
+	PNR integer primary key,
+	PassengerName varchar(255),
+	age int(4),
+	Gender varchar(10),
+	TrainNumber int(8),
+	Origin varchar(255),
+	Destination varchar(255),
+	price int(4)
+	
+	
+
+)
+select * from PassengerDetails;
+
+create table Login 
+(
+	
+	Email varchar(255) primary key,
+	Password varchar(10),
+	UserType varchar(15),
+	Status varchar(10),
+	UserName varchar(10)
+	
+);
+insert into Login(Email,Password,UserType,Status) values ('Vinay','Vinay@1020','Admin','Active');
+select * from Login;
+update Login set Email = 'Sai@gmail.com' where Password = 'Vinay@1020';
+Alter table Login add column UserName varchar(255);
+update Login set UserName = 'Sai Viany';
+drop table TrainDetails;
+create table TrainDetails 
+(
+trainnumber int(7), 
+trainname varchar(255), 
+origin varchar(255), 
+destination varchar(255),
+ticketPrice int(255)
+);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (122451, 'Duronto Express', 'Mumbai', 'Nagpur', 2200); 
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (124362, 'Rajdhani Express', 'Mumbai', 'H Nizamuddin', 3000);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (125053, 'North East Express', 'Guwahati', 'New Delhi', 3200);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (124974, 'Shan-e-Punjab', 'New Delhi', 'Amritsar', 900);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (126255, 'Kerala Express', 'Trivandrum', 'New Delhi', 3500);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (124686, 'Rajasthan Sampark Kranti', 'Jodhpur', 'Delhi', 1200); 
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (120175, 'Ajmer Shatabdi', 'Ajmer', 'New Delhi', 1500); 
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (127798, 'Goa Express', 'Vasco-da-Gama', 'Hazrat Nizamuddin', 2300);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (123039, 'Poorva Express', 'Howrah', 'New Delhi', 2500);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (126431, 'Nizamuddin Express', 'Ernakulam', 'Nizamuddin', 2800);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (126492, 'Karnataka Sampark Kranti', 'Bangalore', 'Hazrat Nizamuddin', 3200);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (128393, 'Howrah Mail', 'Chennai', 'Howrah', 2600);
+INSERT INTO TrainDetails  (trainnumber, trainname, origin, destination, ticketPrice) VALUES (126344, 'Kanniyakumari Express', 'Kanyakumari', 'Chennai', 1300);
+select * from TrainDetails ;
+
+drop table BookingDetails;
+create table BookingDetails
+(
+pnr Integer unique not null,
+gmailid varchar(255),
+name varchar(255),
+age int(3),
+gender varchar(10),
+trainnumber int(7), 
+trainname varchar(255), 
+origin varchar(255), 
+destination varchar(255),
+ticketPrice int(255)
+);
+select * from BookingDetails;
+
+
+  
